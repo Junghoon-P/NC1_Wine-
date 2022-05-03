@@ -36,13 +36,21 @@ struct ContentView: View {
                     .padding()
                     .font(.custom("MADECoachella", size: 24))
                     .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 0))
-                MainDivider(color: .black, width: 1)
-                Text("금주에 들어온 와인 리스트들입니다.")
-                    .padding(EdgeInsets(top: 0, leading: 33, bottom: 9, trailing: 33))
-                Text("다양한 페어링으로 식사를 더욱 즐겁게 해보세요.")
-                    .padding(EdgeInsets(top: 0, leading: 33, bottom: 9, trailing: 33))
+                HStack{
+                    VStack{
+                        Text("금주에 들어온 와인 리스트들입니다.")
+//                            .padding(EdgeInsets(top: 0, leading: 33, bottom: 9, trailing: 33))
+                        Text("다양한 페어링으로 식사를 더욱 즐겁게 해보세요.")
+//                            .padding(EdgeInsets(top: 0, leading: 33, bottom: 9, trailing: 33))
+                    }
+                    Spacer()
+                    Image("wine")
+                        .resizable()
+                        .frame(width: 41, height: 41)
+                }
                 MainDivider(color: .black, width: 1)
             }
+            .padding([.leading,.trailing],33)
            
         }
     }
