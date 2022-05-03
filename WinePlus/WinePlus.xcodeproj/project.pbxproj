@@ -39,6 +39,9 @@
 		75994C2A2820CE6D00E864E6 /* MADECoachellaBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75994C1A2820CE6D00E864E6 /* MADECoachellaBlack.otf */; };
 		75994C2B2820CE6D00E864E6 /* MADECoachellaBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75994C1A2820CE6D00E864E6 /* MADECoachellaBlack.otf */; };
 		75994C2C2820CE6D00E864E6 /* MADECoachellaBlack.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75994C1A2820CE6D00E864E6 /* MADECoachellaBlack.otf */; };
+		75994C332821228400E864E6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75994C322821228400E864E6 /* CardView.swift */; };
+		75994C342821228400E864E6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75994C322821228400E864E6 /* CardView.swift */; };
+		75994C352821228400E864E6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75994C322821228400E864E6 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,7 @@
 		75994C182820CE6D00E864E6 /* MADECoachellaRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MADECoachellaRegular.otf; sourceTree = "<group>"; };
 		75994C192820CE6D00E864E6 /* MADECoachellaMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MADECoachellaMedium.otf; sourceTree = "<group>"; };
 		75994C1A2820CE6D00E864E6 /* MADECoachellaBlack.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MADECoachellaBlack.otf; sourceTree = "<group>"; };
+		75994C322821228400E864E6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 				75994C0C281FB06600E864E6 /* Info.plist */,
 				75994BC1281BABD400E864E6 /* WinePlusApp.swift */,
 				75994BC3281BABD400E864E6 /* ContentView.swift */,
+				75994C312821225900E864E6 /* BottomSheet */,
 				75994C11281FCB4B00E864E6 /* MainAssets.swift */,
 				75994BC5281BABD500E864E6 /* Assets.xcassets */,
 				75994BED281FA61100E864E6 /* Colors.xcassets */,
@@ -178,6 +183,14 @@
 				75994C172820CE6D00E864E6 /* MADECoachellaThin.otf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		75994C312821225900E864E6 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				75994C322821228400E864E6 /* CardView.swift */,
+			);
+			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +347,7 @@
 			files = (
 				75994BC4281BABD400E864E6 /* ContentView.swift in Sources */,
 				75994C12281FCB4B00E864E6 /* MainAssets.swift in Sources */,
+				75994C332821228400E864E6 /* CardView.swift in Sources */,
 				75994BC2281BABD400E864E6 /* WinePlusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75994BD3281BABD500E864E6 /* WinePlusTests.swift in Sources */,
+				75994C342821228400E864E6 /* CardView.swift in Sources */,
 				75994C13281FCB4B00E864E6 /* MainAssets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +368,7 @@
 			files = (
 				75994BDF281BABD500E864E6 /* WinePlusUITestsLaunchTests.swift in Sources */,
 				75994C14281FCB4B00E864E6 /* MainAssets.swift in Sources */,
+				75994C352821228400E864E6 /* CardView.swift in Sources */,
 				75994BDD281BABD500E864E6 /* WinePlusUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

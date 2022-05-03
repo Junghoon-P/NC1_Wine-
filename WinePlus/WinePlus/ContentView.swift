@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var bottomSheetOn = false
     var body: some View {
         VStack {
             HStack {
@@ -30,28 +31,28 @@ struct ContentView: View {
                 .frame(width: 324, height: 231)
                 .cornerRadius(30)
                 .clipShape(Rectangle())
-           
+            
             VStack(alignment: .leading) {
                 Text("Wine of the week")
-                    .padding()
                     .font(.custom("MADECoachella", size: 24))
-                    .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 0))
-                HStack{
-                    VStack{
-                        Text("금주에 들어온 와인 리스트들입니다.")
-//                            .padding(EdgeInsets(top: 0, leading: 33, bottom: 9, trailing: 33))
-                        Text("다양한 페어링으로 식사를 더욱 즐겁게 해보세요.")
-//                            .padding(EdgeInsets(top: 0, leading: 33, bottom: 9, trailing: 33))
-                    }
+                HStack(alignment: .bottom){
+                    Text("Here's a list of wine recommendations for this week. \nExperience a variety of wines.")
+                    //                            .padding(EdgeInsets(top: 0, leading: 33, bottom: 9, trailing: 33))
                     Spacer()
                     Image("wine")
                         .resizable()
                         .frame(width: 41, height: 41)
                 }
-                MainDivider(color: .black, width: 1)
             }
             .padding([.leading,.trailing],33)
-           
+            MainDivider(color: .black, width: 1)
+                Text("Newly stocked wine")
+                    .font(.custom("MADECoachella", size: 24))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding([.leading,.trailing],33)
+                MainDivider(color: .black, width: 1)
+            
+            Spacer()
         }
     }
 }
