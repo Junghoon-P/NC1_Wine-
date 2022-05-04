@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7549F77D282242FA009E51CB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7549F77C282242FA009E51CB /* Color.swift */; };
 		75994BC2281BABD400E864E6 /* WinePlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75994BC1281BABD400E864E6 /* WinePlusApp.swift */; };
 		75994BC4281BABD400E864E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75994BC3281BABD400E864E6 /* ContentView.swift */; };
 		75994BC6281BABD500E864E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75994BC5281BABD500E864E6 /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7549F77C282242FA009E51CB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		75994BBE281BABD400E864E6 /* WinePlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinePlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75994BC1281BABD400E864E6 /* WinePlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinePlusApp.swift; sourceTree = "<group>"; };
 		75994BC3281BABD400E864E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				75994C312821225900E864E6 /* BottomSheet */,
 				75994C11281FCB4B00E864E6 /* MainAssets.swift */,
 				75994BC5281BABD500E864E6 /* Assets.xcassets */,
+				7549F77C282242FA009E51CB /* Color.swift */,
 				75994BED281FA61100E864E6 /* Colors.xcassets */,
 				75994BC7281BABD500E864E6 /* Preview Content */,
 			);
@@ -373,6 +376,7 @@
 				75994C472822297E00E864E6 /* TransactionRow.swift in Sources */,
 				75994BC4281BABD400E864E6 /* ContentView.swift in Sources */,
 				75994C12281FCB4B00E864E6 /* MainAssets.swift in Sources */,
+				7549F77D282242FA009E51CB /* Color.swift in Sources */,
 				75994C3B2822207500E864E6 /* ContentViewTest.swift in Sources */,
 				75994C432822263E00E864E6 /* BottomSheetContentView.swift in Sources */,
 				75994C332821228400E864E6 /* CardView.swift in Sources */,

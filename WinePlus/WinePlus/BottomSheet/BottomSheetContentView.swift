@@ -38,7 +38,7 @@ struct BottomSheetContentView: View {
                     .frame(width:140, height:200)
             }
             .padding(24)
-            .background(Color(.blue))
+            .background(Color("mainBackground"))
             
             Text("Transactions")
                 .font(.title2).bold()

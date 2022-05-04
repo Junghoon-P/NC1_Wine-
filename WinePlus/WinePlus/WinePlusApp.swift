@@ -11,7 +11,8 @@ import SwiftUI
 struct WinePlusApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            BottomSheetView()
         }
     }
 }
