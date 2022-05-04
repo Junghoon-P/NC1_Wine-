@@ -12,6 +12,21 @@ struct BottomSheetView: View {
     @State var offsetY: CGFloat = 0
     
     var body: some View {
+        ZStack {
+            content
+            
+            Image(systemName: "xmark")
+                .font(.body.bold())
+                .foregroundColor(.white)
+                .padding(9)
+                .background(Color(uiColor: .systemCyan))
+                .mask(Circle())
+                .frame(minWidth: .infinity,   minHeight: .infinity,  alignment: .topLeading)
+                .padding()
+        }
+    }
+    
+    var content: some View {
         GeometryReader { proxy in 
             VStack {
                 //            ContentView()
