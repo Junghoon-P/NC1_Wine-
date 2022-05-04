@@ -10,19 +10,27 @@ import SwiftUI
 struct BottomSheetView: View {
     @State var translation: CGSize = .zero
     @State var offsetY: CGFloat = 0
+    @Binding var show : Bool
     
     var body: some View {
         ZStack {
             content
             
-            Image(systemName: "xmark")
-                .font(.body.bold())
-                .foregroundColor(.white)
-                .padding(9)
-                .background(Color(uiColor: .systemCyan))
-                .mask(Circle())
-                .frame(minWidth: .infinity,   minHeight: .infinity,  alignment: .topLeading)
-                .padding()
+            Button {
+                withAnimation(.easeOut){
+                    show.toggle()
+                }
+            } label: {
+                Image(systemName: "xmark")
+                    .font(.body.bold())
+                    .foregroundColor(.white)
+                    .padding(9)
+                    .background(Color(uiColor: .systemCyan))
+                    .mask(Circle())
+            }
+            .frame(maxWidth: .infinity,   maxHeight: .infinity,  alignment: .topTrailing)
+            .padding()
+            .opacity(show ? 1: 0)
         }
     }
     
@@ -48,9 +56,11 @@ struct BottomSheetView: View {
                             
                             if snap > quarter && snap < quarter*3 {
                                 offsetY = quarter*2
-                            } else if snap > quarter*3 {
-                                offsetY = quarter*3
-                            }else {
+                            } else if snap > quarter*3 && snap < quarter*4 {
+                                offsetY = quarter*3 + 100
+                            } else if snap > quarter*4 {
+                                show.toggle()
+                            } else {
                                 offsetY = 0
                             }
                             
@@ -69,7 +79,7 @@ struct BottomSheetView: View {
 
 struct BottomSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        BottomSheetView()
+        BottomSheetView(show: .constant(true))
             .background(.blue)
             .previewInterfaceOrientation(.portrait)
     }

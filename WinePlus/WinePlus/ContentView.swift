@@ -17,9 +17,10 @@ struct ContentView: View {
             if show {
                 Color.black.opacity(0.3).ignoresSafeArea()
                 
-                BottomSheetView()
+                BottomSheetView(show: $show)
                     .transition(.move(edge: .bottom))
                     .zIndex(1)
+                
             }
         }
         .onTapGesture {
