@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct TransactionRow: View {
-    var title = "Wines"
-    var subtitle = "13 new wines"
+    var title = "Wines Name"
+    var subtitle = "origin"
     var number = "1"
-    var amount = "$364.00"
+    var price = "$364.00"
     var color = Color.blue
     
     var body: some View {
@@ -22,6 +22,7 @@ struct TransactionRow: View {
             .foregroundColor(.white)
             .frame(width: 50, height: 50)
             .background(color)
+            .cornerRadius(10)
 //            .mask(RoundedCornerStyle(radius: 30, corners: [.topLeft, .bottomRight]))
             
             VStack(alignment: .leading){
@@ -32,7 +33,7 @@ struct TransactionRow: View {
             
             Spacer()
             
-            Text(amount)
+            Text(price)
         }
     }
 }

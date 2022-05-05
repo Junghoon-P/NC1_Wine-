@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct BottomSheetContentView: View {
+    var title = "Red Wines"
+    var quantitiy = "13"
+    var color = "mainRed"
+    
     var body: some View {
         VStack{
             RoundedRectangle(cornerRadius: 3, style: .continuous)
@@ -15,30 +19,36 @@ struct BottomSheetContentView: View {
                 .padding(8)
             
             HStack(spacing: 16) {
-                Text("Cards").font(.largeTitle).bold()
-                Button {} label: {
-                    Label("Add", systemImage: "plust.circle.fill")
-                        .font(.body.bold())
-                        .foregroundColor(.white)
-                        .padding(8)
-                        .padding(.horizontal, 8)
-                }
-                .background(Color(UIColor(.accentColor)))
-                .cornerRadius(30)
-                
+                Text(title).font(.largeTitle).bold()
                 Spacer()
+                Text(quantitiy).font(.title).bold()
+//                Image("cart")
+//                    .resizable()
+//                    .frame(width: 25, height: 25)
+//                Button {} label: {
+//                    Label("Add", systemImage: "plust.circle.fill")
+//                        .font(.body.bold())
+//                        .foregroundColor(.white)
+//                        .padding(8)
+//                        .padding(.horizontal, 8)
+//                }
+//                .background(Color(UIColor(.accentColor)))
+//                .cornerRadius(30)
             }
             .padding(24)
             
             HStack {
-                CardView(title: "Red Wine", x:-100, y:100)
+                CardView(title: "Chateau Pavie", x:-100, y:100)
                     .frame(width:140, height:200)
+                    .padding(14)
                 Spacer()
-                CardView(title: "Bank", x:100, y:-100)
+                CardView(title: "Chateau Figeac", x:100, y:-100)
                     .frame(width:140, height:200)
+                    .padding(14)
             }
             .padding(24)
-            .background(Color("mainBackground"))
+            .background(Color("subRed"))
+            .cornerRadius(20)
             
             Text("Transactions")
                 .font(.title2).bold()
@@ -46,14 +56,15 @@ struct BottomSheetContentView: View {
                 .padding(24)
             
             VStack {
-                TransactionRow(title: "wine", subtitle: "3 transcations", number:"1", amount: "$324.00", color: .blue)
-                TransactionRow(title: "wine", subtitle: "3 transcations", number:"1", amount: "$324.00", color: .blue)
-                TransactionRow(title: "wine", subtitle: "3 transcations", number:"1", amount: "$324.00", color: .blue)
+                TransactionRow(title: "wine", subtitle: "3 transcations", number:"1", price: "$324.00", color: .blue)
+                TransactionRow(title: "wine", subtitle: "3 transcations", number:"1", price: "$324.00", color: .blue)
+                TransactionRow(title: "wine", subtitle: "3 transcations", number:"1", price: "$324.00", color: .blue)
             }
             .padding(.horizontal, 24)
             
             Spacer()
         }
+        .background(Color(color))
     }
 }
 
