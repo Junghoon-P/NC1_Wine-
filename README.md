@@ -1,22 +1,24 @@
 # Wine+ 🍷
 <img src="https://velog.velcdn.com/images/park_kyo_su/post/265bdf27-6eb9-414e-bfb1-1a875f968a43/image.png" width="600"/>
 
-### 프로젝트 개요
+### 🎉 프로젝트 개요
 홈플러스에서 주기적으로 변하는 와인 장터 리스트들을
 app을 통해 보다 상세한 와인 정보 및 가격 변동사항
 관심있는 품목 담기 등을 제공합니다.
 
-### 프로젝트 목표
+### 🔥 프로젝트 목표
 - SwiftUi LifeCycle 효율적 구조 설계
 - view간 유연한 state 설계
 - Json data 연동
 - HIG 기반 레이아웃
 - 기획, 디자인, 개발 프로세스 직접 구현
+<br/>
 
-### 프로젝트 기간
+### 🗓 프로젝트 기간
 
 **2022.04.25-2022.05.06**
-
+<br/>
+<br/>
 ### 구현view
 <!-- ![Simulator Screen Recording - iPhone 13 - 2022-05-06 at 13 17 34](https://user-images.githubusercontent.com/77766769/167066206-949b0fde-0cdd-4072-9687-b33dc2a5f110.gif) -->
 <img src="https://user-images.githubusercontent.com/77766769/167066206-949b0fde-0cdd-4072-9687-b33dc2a5f110.gif" width="300"/>
