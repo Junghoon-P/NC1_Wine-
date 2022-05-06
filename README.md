@@ -26,6 +26,10 @@ app을 통해 보다 상세한 와인 정보 및 가격 변동사항
 - Swift
 - SwiftUi
 
+## 디자인툴
+- Figma
+- Adobe Illustrator
+
 ### 협업툴
 
 - discord
