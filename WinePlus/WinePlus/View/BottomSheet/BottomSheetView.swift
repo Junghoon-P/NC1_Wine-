@@ -25,7 +25,7 @@ struct BottomSheetView: View {
                     .font(.body.bold())
                     .foregroundColor(.white)
                     .padding(9)
-                    .background(Color(uiColor: .systemCyan))
+                    .background(Color.white.opacity(0.2))
                     .mask(Circle())
             }
             .frame(maxWidth: .infinity,   maxHeight: .infinity,  alignment: .topTrailing)
