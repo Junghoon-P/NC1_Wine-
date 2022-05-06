@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct WinePlusApp: App {
+    @StateObject var wineData = WineData()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(wineData)
         }
     }
 }

@@ -14,9 +14,10 @@ struct CardView: View {
     
     var body: some View {
         VStack {
-            Text(title).font(.title).bold()
+            Text(title)
+                .font(.system(size: 20, weight: .bold))
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                .padding(30)
+                .padding(10)
         }
         .foregroundColor(.white)
         .frame(maxWidth: .infinity)

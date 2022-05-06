@@ -12,7 +12,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            HomeView()
+            HomeView(show: $show)
             
             if show {
                 Color.black.opacity(0.3).ignoresSafeArea()
@@ -20,14 +20,13 @@ struct ContentView: View {
                 BottomSheetView(show: $show)
                     .transition(.move(edge: .bottom))
                     .zIndex(1)
-                
             }
         }
-        .onTapGesture {
-            withAnimation{
-                show.toggle()
-            }
-        }
+//        .onTapGesture {
+//            withAnimation{
+//                show.toggle()
+//            }
+//        }
 
     }
 }

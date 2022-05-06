@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Binding var show : Bool
+    @EnvironmentObject var wineData : WineData
     
     var body: some View {
         VStack {
@@ -46,19 +48,48 @@ struct HomeView: View {
             }
             .padding([.leading,.trailing],33)
             MainDivider(color: .black, width: 1)
-                Text("Newly stocked wine")
-                    .font(.custom("MADECoachella", size: 24))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding([.leading,.trailing],33)
-                MainDivider(color: .black, width: 1)
+            Text("Newly stocked wine")
+                .font(.custom("MADECoachella", size: 24))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding([.leading,.trailing],33)
+            MainDivider(color: .black, width: 1)
             
-            Spacer()
+            ZStack {
+                ModalTab(type:0)
+                    .onTapGesture {
+                        withAnimation{
+                            show.toggle()
+                            self.wineData.selectedTab=0
+                            print(self.wineData.selectedTab)
+                        }
+                    }
+                
+                ModalTab(type:1)
+                    .onTapGesture {
+                        withAnimation{
+                            show.toggle()
+                            self.wineData.selectedTab=1
+                        }
+                    }
+                    .offset(x: 0, y: 85)
+                ModalTab(type:2)
+                    .onTapGesture {
+                        withAnimation{
+                            show.toggle()
+                            self.wineData.selectedTab=2
+                        }
+                    }
+                    .offset(x: 0, y: 170)
+            }
+//            .ignoresSafeArea(edges:.bottom)
+            
+            //            Spacer()
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(show: .constant(false))
     }
 }

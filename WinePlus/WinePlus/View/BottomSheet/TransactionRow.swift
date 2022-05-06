@@ -8,37 +8,38 @@
 import SwiftUI
 
 struct TransactionRow: View {
-    var title = "Wines"
-    var subtitle = "13 new wines"
-    var number = "1"
-    var amount = "$364.00"
-    var color = Color.blue
+    var title = "Wines Name"
+    var subtitle = 1
+    var number = 1
+    var price = "$364.00"
+    var wines: Wines
     
     var body: some View {
         HStack(spacing:12){
             VStack {
-                Text(number).bold()
+                Text("\(number)").bold()
             }
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .frame(width: 50, height: 50)
-            .background(color)
-//            .mask(RoundedCornerStyle(radius: 30, corners: [.topLeft, .bottomRight]))
+            .border(Color.white)
+            .cornerRadius(10)
+
             
             VStack(alignment: .leading){
                 Text(title).font(.headline)
-                Text(subtitle).font(.subheadline)
+                Text("\(subtitle)").font(.subheadline)
                     .foregroundColor(.secondary )
             }
             
             Spacer()
             
-            Text(amount)
+            Text("\(price) $")
         }
     }
 }
 
 struct TransactionRow_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionRow()
+        TransactionRow(wines: wines[0])
     }
 }
